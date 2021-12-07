@@ -1,0 +1,813 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* Common */
+
+body {
+    background-color: #F2F2F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.container-main {
+    max-width: 1322px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+/* Header: menu */
+
+.hero {
+    max-width: 100%;
+    min-height: 962px;
+    position: relative;
+    background-image: url(./img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.hero:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    background-image: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
+    opacity: 0.8;
+}
+
+.hero-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.hero-navbar__logo-link {
+    z-index: 15;
+}
+
+.hero-navbar__logo-link:hover {
+    cursor: pointer;
+}
+
+.hero-navbar-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-navbar-menu__item {
+    z-index: 15;
+}
+
+.hero-navbar-menu__item:not(:last-child) {
+    margin-right: 70px;
+}
+
+.hero-navbar-menu-link {
+    display: block;
+    font-size: 18px;
+    position: relative;
+    transition: .5s;
+}
+
+.hero-navbar-menu-link:hover {
+    cursor: pointer;
+}
+
+.hero-navbar-menu-link:active {
+    transform: scale(1.3);
+}
+
+.raise::after {
+    display: block;
+    content: "";
+    background: linear-gradient(45deg, rgb(27, 125, 255) 29%, rgb(43, 43, 222) 75%, rgb(49, 36, 184) 84%);
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    transition: .2s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.raise:hover::after {
+    width: 120%;
+}
+
+.raise:focus::after {
+    width: 120%;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+
+/* Header: text*/
+
+.hero-inner {
+    margin-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-inner-content {
+    width: 60%;
+    overflow: hidden;
+}
+
+.hero-content__title {
+    margin-bottom: 22px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.hero-content__text {
+    width: 85%;
+    line-height: 24px;
+}
+
+
+/* Header: search form*/
+
+.hero-search-form {
+    width: 80%;
+    margin-top: 60px;
+}
+
+.hero-search-form__input {
+    width: 30%;
+    padding: 10px 40px;
+    margin-right: 60px;
+    border: none;
+    border-bottom: 2px solid #BFC0C5;
+    background: transparent;
+    line-height: 24px;
+    color: #fff;
+}
+
+#hero-search-form__input-left+label,
+#hero-search-form__input-right+label {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#hero-search-form__input-left+label:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -317px;
+    border-radius: 7.5em;
+    border: 1px solid #fff;
+}
+
+#hero-search-form__input-right+label:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -317px;
+    border-radius: 7.5em;
+    border: 1px solid #fff;
+}
+
+.hero-search-form__input::placeholder {
+    color: #fff;
+}
+
+.btn-search {
+    margin-left: 30px;
+    padding: 15px 40px;
+    cursor: pointer;
+    background: #1B7DFF;
+    border: 1px solid #1B7DFF;
+    outline: none;
+    transition: 1s ease-in-out;
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.btn-search:hover {
+    transition: 1s ease-in-out;
+    background: transparent;
+}
+
+.btn-search:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn-search span {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* Block Our benefits */
+
+.our-benefits {
+    width: 1262px;
+    min-height: 655px;
+    position: absolute;
+    top: 730px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    background-color: #fff;
+}
+
+.our-benefits-inner {
+    margin: 90px 100px;
+}
+
+.our-benefits__title {
+    font-size: 35px;
+    font-weight: 500;
+    color: #102746;
+}
+
+.our-benefits-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 138px;
+}
+
+.our-benefits-item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 288px;
+    position: relative;
+}
+
+.our-benefits-item__img {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 37px;
+}
+
+.our-benefits-item__title {
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.our-benefits-item__text {
+    margin-bottom: 39px;
+    line-height: 24px;
+}
+
+.our-benefits-item-inner {
+    overflow: hidden;
+    height: 250px;
+}
+
+.our-benefits-item__link-learn-more {
+    display: block;
+    color: #006DFE;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+}
+
+.our-benefits-item__link-learn-more::after {
+    content: url('./img/Icons/arrow-right.svg');
+    width: 33px;
+    height: 8px;
+    position: relative;
+    display: block;
+    top: -22px;
+    left: 130px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+
+/* Get inspired - destinations for a trip */
+
+.destinations-for-trip {
+    margin-top: 500px;
+}
+
+.destinations-for-trip-top {
+    margin-bottom: 46px;
+}
+
+.destinations-for-trip__title-main {
+    position: relative;
+    font-size: 35px;
+    font-weight: 500;
+    color: #102746;
+}
+
+.destinations-for-trip__title-main::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 253px;
+    height: 3px;
+    background: #006DFE;
+}
+
+.destinations-for-trip__link-view-all {
+    display: block;
+    margin-right: 102px;
+    color: #006DFE;
+    text-transform: uppercase;
+    animation: animat 1.8s infinite;
+    animation-direction: reverse;
+    position: relative;
+}
+
+@keyframes animat {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.destinations-for-trip__link-view-all::after {
+    content: url('./img/Icons/arrow-right.svg');
+    width: 33px;
+    height: 8px;
+    position: relative;
+    display: block;
+    top: -22px;
+    left: 110px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.destinations-for-trip-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.destinations-for-trip-row-top,
+.destinations-for-trip-row-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.destinations-for-trip-row-bottom {
+    margin-top: 10px;
+}
+
+.destinations-for-trip-item-top:not(:last-child) {
+    margin-right: 10px;
+}
+
+.destinations-for-trip__link-top {
+    padding-top: 260px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: .5s;
+}
+
+.destinations-for-trip__link-bottom {
+    padding-top: 205px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: .5s;
+}
+
+.destinations-for-trip-title {
+    display: block;
+    margin-left: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    transition: 1.5s;
+}
+
+.destinations-for-trip-item-top {
+    width: calc(50%-10px);
+    flex: 1;
+    position: relative;
+}
+
+.destinations-for-trip-item-bottom {
+    width: calc(33.33% - 20px);
+    flex: 1;
+    position: relative;
+}
+
+.destinations-for-trip-item-bottom:not(:last-child) {
+    margin-right: 10px;
+}
+
+.destinations-for-trip-item-top a {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.destinations-for-trip__link-image-1 {
+    background-image: url(./img/Destinations-for-next-trip/mount-fuji.jpg);
+    min-height: 354px;
+}
+
+.destinations-for-trip__link-image-2 {
+    background-image: url(./img/Destinations-for-next-trip/kyoto.jpg);
+    min-height: 354px;
+}
+
+.destinations-for-trip__link-top:hover {
+    width: 100%;
+    min-height: 354px;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    color: #1B7DFF;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #006DFE;
+    text-align: center;
+}
+
+.destinations-for-trip__link-image-3 {
+    background-image: url(./img/Destinations-for-next-trip/tokyo.jpg);
+    min-height: 283px;
+}
+
+.destinations-for-trip__link-image-4 {
+    background-image: url(./img/Destinations-for-next-trip/osaka.jpg);
+    min-height: 283px;
+}
+
+.destinations-for-trip__link-image-5 {
+    background-image: url(./img/Destinations-for-next-trip/sapporo.jpg);
+    min-height: 283px;
+}
+
+.destinations-for-trip__link-bottom:hover {
+    width: 100%;
+    min-height: 283px;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    color: #1B7DFF;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #006DFE;
+    text-align: center;
+}
+
+.destinations-for-trip-title:active {
+    transform: scale(1.5);
+}
+
+
+/* Block Places in focus */
+
+.places-in-focus {
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+.places-in-focus-row-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.places-in-focus-row-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.places-in-focus-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    margin: 40px;
+}
+
+.places-in-focus-img {
+    width: 46%;
+    transition: 0.5s;
+}
+
+.places-in-focus-animation-top:hover {
+    transform: scale(1.13) translateX(50px);
+}
+
+.places-in-focus-animation-bottom:hover {
+    transform: scale(1.13) translateX(-50px);
+}
+
+.places-in-focus-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #102746;
+}
+
+.places-in-focus-text {
+    line-height: 24px;
+    color: #102746;
+}
+
+.places-in-focus-read-more {
+    display: flex;
+    align-items: center;
+}
+
+.places-in-focus-read-more-arrow {
+    width: 33px;
+    height: 8px;
+}
+
+.places-in-focus-link-read-more {
+    margin-right: 25px;
+    color: #006DFE;
+    text-transform: uppercase;
+}
+
+
+/* Block Today-top-places*/
+
+.top-places__title {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.top-places__title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 253px;
+    height: 3px;
+    background: #006DFE;
+}
+
+.top-places-inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-places-item {
+    width: 30%;
+}
+
+.top-places-item-block-image {
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+.top-places-item__image-1 {
+    background-image: url(./img/Today-top-places/nagoya.jpg);
+}
+
+.top-places-item__image-2 {
+    background-image: url(./img/Today-top-places/nigata.jpg);
+}
+
+.top-places-item__image-3 {
+    background-image: url(./img/Today-top-places/osaka.jpg);
+}
+
+.top-places-item__image-4 {
+    background-image: url(./img/Today-top-places/sitama.jpg);
+}
+
+.top-places-item__image-5 {
+    background-image: url(./img/Today-top-places/ueno.jpg);
+}
+
+.top-places-item__image-6 {
+    background-image: url(./img/Today-top-places/shibuya.jpg);
+}
+
+.top-places-item-block-image-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    padding: 0 50px 0 25px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.top-places-item-block-image__title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.top-places-counter {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.top-places-counter:first-child {
+    margin-right: 20px;
+}
+
+.top-places-counter:first-child::after {
+    content: url('./img/Icons/heart.png');
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.top-places-counter:last-child::after {
+    content: url('./img/Icons/comments.png');
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.top-places-item-text-and-btn {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top-places-item__text {
+    line-height: 24px;
+}
+
+.top-places-item__btn {
+    width: 118px;
+    height: 42px;
+    display: block;
+    margin-bottom: 40px;
+    padding: 12px 19px;
+    background-color: #006DFE;
+    color: #fff;
+    outline: none;
+}
+
+.top-places-item__btn:hover {
+    cursor: pointer;
+}
+
+.top-places-item__btn-animation {
+    transition: all 100ms ease-in-out;
+}
+
+.top-places-item__btn-animation:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    border-radius: 10px;
+}
+
+.top-places-item__btn-animation:active {
+    transform: scale(1.2);
+}
+
+
+/* Блок с видео */
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+}
+
+.video iframe {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer */
+
+.footer {
+    max-width: 100%;
+    background-color: #0E1D28;
+}
+
+.footer-logo__link:hover {
+    cursor: pointer;
+}
+
+.footer-inner {
+    min-height: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-menu {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu div:not(:last-child) {
+    margin-right: 150px;
+}
+
+.footer-menu__link {
+    display: block;
+}
+
+.footer-animation {
+    background: linear-gradient(-45deg, transparent calc(100%/3), rgb(255, 255, 255), transparent calc(200%/3)) bottom right/350% 100% no-repeat;
+    transition: 0.5s linear, background-size 0s 0.5s;
+}
+
+.footer-animation:active {
+    background-position: bottom left;
+    background-size: 0 0;
+}
+
+.footer-menu-column-random li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.footer-menu-column__title {
+    margin-bottom: 5px;
+}
+
+
+/* Button Scroll Top */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 130px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, rgb(27, 125, 255) 29%, rgb(43, 43, 222) 75%, rgb(84, 74, 196) 84%);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#myBtn:active {
+    background-color: #555;
+}
