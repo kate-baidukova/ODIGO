@@ -308,6 +308,7 @@ body {
     text-transform: uppercase;
     position: absolute;
     bottom: 0;
+    transition: all .5s;
 }
 
 .our-benefits-item__link-learn-more::after {
@@ -321,6 +322,14 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+}
+
+.our-benefits-item__link-learn-more:hover {
+    transform: scale(1.1);
+}
+
+.our-benefits-item__link-learn-more:active {
+    transform: scale(1.2);
 }
 
 
