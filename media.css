@@ -248,29 +248,11 @@
         padding-top: 0;
         position: relative;
     }
-    .destinations-for-trip__link-top::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: transparent;
-        background-image: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
-        opacity: 0.8;
+    .destinations-for-trip__link-top:hover {
+        position: relative;
     }
-    .destinations-for-trip__link-bottom::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: transparent;
-        background-image: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
-        opacity: 0.8;
+    .destinations-for-trip__link-bottom:hover {
+        position: relative;
     }
     .destinations-for-trip-title {
         z-index: 5;
@@ -316,6 +298,12 @@
     .places-in-focus-img {
         width: 100%;
         position: relative;
+    }
+    .places-in-focus-animation-top:hover {
+        transform: none;
+    }
+    .places-in-focus-animation-bottom:hover {
+        transform: none;
     }
     /* Block Top places */
     .top-places {

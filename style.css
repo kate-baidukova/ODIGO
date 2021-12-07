@@ -490,7 +490,7 @@ body {
 
 .destinations-for-trip__link-bottom:hover {
     width: 100%;
-    min-height: 283px;
+    height: 283px;
     position: absolute;
     top: 0;
     margin-top: 0;
@@ -500,9 +500,10 @@ body {
     text-align: center;
 }
 
-.destinations-for-trip-title:active {
+
+/* .destinations-for-trip-title:active {
     transform: scale(1.5);
-}
+} */
 
 
 /* Block Places in focus */
