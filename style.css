@@ -747,7 +747,7 @@ iframe {
 }
 
 .video__title {
-    visibility: hidden;
+    display: none;
 }
 
 
