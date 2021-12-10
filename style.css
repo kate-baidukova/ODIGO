@@ -746,6 +746,10 @@ iframe {
     border: 0;
 }
 
+.video__title {
+    visibility: hidden;
+}
+
 
 /* Footer */
 
